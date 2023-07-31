@@ -3,8 +3,8 @@ import requests
 from urllib.parse import urlparse
 from concurrent.futures import ThreadPoolExecutor
 from urllib.parse import unquote
-requests.packages.urllib3.disable_warnings()
 from urllib.parse import urljoin
+requests.packages.urllib3.disable_warnings()
 def check_url_status(url):
     try:
         headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0'}
@@ -26,7 +26,7 @@ def process_url(path, url_to_check):
         parsed_url = urlparse(url_to_check)
         scheme = parsed_url.scheme
         domain_parts = parsed_url.netloc.split('.')
-        if domain_parts[-2] in ['co', 'com', 'ac', 'or', 'go', 'ne']: # 2レベルTLDのリストを追加
+        if domain_parts[-2] in ['co', 'com', 'ac', 'or', 'go', 'ne']:
             base_domain = '.'.join(domain_parts[-3:])
         else:
             base_domain = '.'.join(domain_parts[-2:])

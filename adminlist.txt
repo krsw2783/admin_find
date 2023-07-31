@@ -1,3 +1,11 @@
+admin.[]
+login.[]
+user.[]
+users.[]
+admin1.[]
+admin2.[]
+admin3.[]
+login1.[]
 /admin/control/login.php
 /admin
 /admin.asp

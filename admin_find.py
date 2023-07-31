@@ -37,7 +37,7 @@ def process_url(path, url_to_check):
         full_url = urljoin(url_to_check,path.strip())
     status = check_url_status(full_url)
     if status:
-        print(f"{full_url}は恐らくログイン場面ナリ")
+        print(f"{full_url}は恐らくログイン画面ナリ")
     
 def main():
     parser = argparse.ArgumentParser(description="Check URL status from a list of admin URLs.")
